@@ -1,0 +1,15 @@
+src-git packages https://git.openwrt.org/feed/packages.git;openwrt-24.10
+src-git luci https://git.openwrt.org/project/luci.git;openwrt-24.10
+src-git routing https://git.openwrt.org/feed/routing.git;openwrt-24.10
+src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-24.10
+
+
+
+
+
+src-git helloworld https://github.com/fw876/helloworld.git
+src-git passwall https://github.com/xiaorouji/openwrt-passwall.git
+src-git OpenClash https://github.com/vernesong/OpenClash.git
+src-git adbyby https://github.com/ywt114/luci-app-adbyby-plus-lite.git
+src-git accesscontrol https://github.com/Aslin-Ameng/luci-app-access-control.git
+src-git ddns https://github.com/sirpdboy/luci-app-ddns-go.git

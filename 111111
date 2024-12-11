@@ -1,0 +1,48 @@
+项目修改：
+1、修改网关地址为“192.168.5.1”，时区为上海
+2、修改“fedds/luci/modules/luci-base/root/www/index.html”，去除了跳转链接显示的文字
+3、修改“feeds/luci/collections/”目录下的绑定默认主题，改为“luci-theme-argon”
+4、修改“target/linux/ramips/dts/mt7621_phicomm_k2p.dts”文件，把“0xf60000”改为“0x1f60000”和“target/linux/ramips/image/mt7621.mk”文件中的“15744k”改为“31744k”。导致k2p固件为32m。
+6、添加了hpz中的应用。
+7、package/system/rpcd/files/rpcd.config中的用户名和密码
+
+8、
+
+
+find ./ -name "go.mod"
+find ./ -name "go" | grep "go"
+./staging_dir/hostpkg/bin/go version
+make menuconfig
+ll
+screen -S openwrt
+screen -r openwrt
+ll
+ll feeds/package/lang/golang
+ll feeds/packages/lang/golang
+cd route/openwrt
+ll feeds/packages/lang/golang
+mv feeds/packages/lang/golang feeds/packages/lang/golang.bak
+ll feeds/packages/lang/golang
+cd feeds/packages/lang
+ll
+git clone https://github.com/sbwml/packages_lang_golang -b 22.x ./golang
+ll feeds/packages/lang/golang
+cd feeds/packages/lang
+ll
+ll golang
+cd ../../
+cd ..
+make download V=s
+
+
+https://mirror2.openwrt.org/sources/
+
+9、修改密码用户名webcli:$1$qdmLdLAV$qAZ5DJL7Jt8KfFkFpLKWA0:19279:0:99999:7:::
+
+
+
+
+https://www.cnblogs.com/luokeli0755/articles/17516209.html
+https://www.right.com.cn/FORUM/forum.php?mod=viewthread&tid=4042641&page=1
+https://resona.top/2021/04/20/OpenWRT%E5%9C%A8%E7%BC%96%E8%AF%91%E5%89%8D%E9%80%89%E6%8B%A9%E8%A6%81%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%BB%E9%A2%98/
+https://www.right.com.cn/forum/thread-3465887-1-1.html
