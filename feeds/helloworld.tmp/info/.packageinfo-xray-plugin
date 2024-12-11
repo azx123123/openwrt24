@@ -1,0 +1,24 @@
+Source-Makefile: feeds/helloworld/xray-plugin/Makefile
+Build-Depends: golang/host
+
+Package: xray-plugin
+Submenu: Web Servers/Proxies
+Version: 1.8.24-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: SIP003 plugin for Shadowsocks, based on Xray
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: xray-plugin-1.8.24.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/teddysun/xray-plugin
+Type: ipkg
+Description: SIP003 plugin for Shadowsocks, based on Xray
+@@
+
+

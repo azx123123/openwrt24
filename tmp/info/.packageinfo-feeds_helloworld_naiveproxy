@@ -1,0 +1,26 @@
+Source-Makefile: package/feeds/helloworld/naiveproxy/Makefile
+Build-Depends: gn/host
+
+Package: naiveproxy
+Submenu: Web Servers/Proxies
+Version: 129.0.6668.81-2-r1
+Depends: +libc @!(arc||armeb||mips||mips64||powerpc||TARGET_gemini) +libatomic
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: helloworld
+Title: Make a fortune quietly
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: naiveproxy-129.0.6668.81-2.tar.gz
+License: BSD 3-Clause
+LicenseFiles: LICENSE
+URL: https://github.com/klzgrad/naiveproxy
+Type: ipkg
+Description:   NaïveProxy uses Chrome's network stack to camouflage traffic with strong
+  censorship resistance and low detectability. Reusing Chrome's stack also
+  ensures best practices in performance and security.
+@@
+
+

@@ -1,0 +1,24 @@
+Build-Depends: golang/host
+
+Package: v2ray-plugin
+Submenu: Web Servers/Proxies
+Version: 5.17.0-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: SIP003 plugin for shadowsocks, based on v2ray
+Maintainer: madeye <max.c.lv@gmail.com>
+Source: v2ray-plugin-5.17.0.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/teddysun/v2ray-plugin
+Type: ipkg
+Description: SIP003 plugin for shadowsocks, based on v2ray
+@@
+
+Makefile:29: /root/route/openwrt24/feeds/packages/lang/golang/golang-package.mk: No such file or directory
+gmake[1]: *** No rule to make target '/root/route/openwrt24/feeds/packages/lang/golang/golang-package.mk'.  Stop.

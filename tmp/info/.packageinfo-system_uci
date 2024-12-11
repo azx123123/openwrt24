@@ -1,0 +1,55 @@
+Source-Makefile: package/system/uci/Makefile
+
+Package: libuci
+Version: 2023.08.10~5781664d5087ccc4b5ab58505883231212dbedbc-r1
+Depends: +libc +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: C library for the Unified Configuration Interface (UCI)
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uci-2023.08.10~5781664d5087ccc4b5ab58505883231212dbedbc.tar.zst
+License: LGPL-2.1
+ABI-Version: 20130104
+Type: ipkg
+Description: C library for the Unified Configuration Interface (UCI)
+@@
+
+Package: libuci-lua
+Version: 2023.08.10~5781664d5087ccc4b5ab58505883231212dbedbc-r1
+Depends: +libc +libuci +liblua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Lua plugin for UCI
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uci-2023.08.10~5781664d5087ccc4b5ab58505883231212dbedbc.tar.zst
+License: LGPL-2.1
+Type: ipkg
+Description: Lua plugin for UCI
+@@
+
+Package: uci
+Version: 2023.08.10~5781664d5087ccc4b5ab58505883231212dbedbc-r1
+Depends: +libc +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: Utility for the Unified Configuration Interface (UCI)
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: uci-2023.08.10~5781664d5087ccc4b5ab58505883231212dbedbc.tar.zst
+License: LGPL-2.1
+Type: ipkg
+Description: Utility for the Unified Configuration Interface (UCI)
+@@
+
+

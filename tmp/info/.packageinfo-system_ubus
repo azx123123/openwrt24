@@ -1,0 +1,73 @@
+Source-Makefile: package/system/ubus/Makefile
+
+Package: libubus
+Version: 2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db-r1
+Depends: +libc +libubox
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: OpenWrt RPC client library
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ubus-2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db.tar.zst
+License: LGPL-2.1
+ABI-Version: 20241020
+Type: ipkg
+Description: OpenWrt RPC client library
+@@
+
+Package: libubus-lua
+Version: 2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db-r1
+Depends: +libc +libubus +liblua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Lua binding for the OpenWrt RPC client
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ubus-2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db.tar.zst
+License: LGPL-2.1
+Type: ipkg
+Description: Lua binding for the OpenWrt RPC client
+@@
+
+Package: ubus
+Version: 2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db-r1
+Depends: +libc +libubus +libblobmsg-json +ubusd
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: OpenWrt RPC client utility
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: ubus-2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db.tar.zst
+License: LGPL-2.1
+Type: ipkg
+Description: OpenWrt RPC client utility
+@@
+
+Package: ubusd
+Version: 2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db-r1
+Depends: +libc +libubox +libblobmsg-json
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: OpenWrt RPC daemon
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Require-User: ubus=81:ubus=81
+Source: ubus-2024.10.20~252a9b0c1774790fb9c25735d5a09c27dba895db.tar.zst
+License: LGPL-2.1
+Type: ipkg
+Description: OpenWrt RPC daemon
+@@
+
+

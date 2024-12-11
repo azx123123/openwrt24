@@ -1,0 +1,23 @@
+Source-Makefile: package/hpz/mt/luci-app-mtwifi/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-mtwifi
+Submenu: 3. Applications
+Version: 1-r8
+Depends: +libc @TARGET_ramips @!PACKAGE_kmod-mt7615d_dbdc +mt_wifi +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI support for mt wifi driver
+Maintainer: OpenWrt LuCI community
+Source: 
+License: GPLv2
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description: LuCI support for mt wifi driver
+@@
+
+

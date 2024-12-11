@@ -1,0 +1,80 @@
+	config FEED_packages
+		tristate "Enable feed packages"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"packages\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_luci
+		tristate "Enable feed luci"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"luci\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_routing
+		tristate "Enable feed routing"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"routing\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_telephony
+		tristate "Enable feed telephony"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"telephony\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_helloworld
+		tristate "Enable feed helloworld"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"helloworld\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_passwall
+		tristate "Enable feed passwall"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"passwall\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_OpenClash
+		tristate "Enable feed OpenClash"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"OpenClash\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_adbyby
+		tristate "Enable feed adbyby"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"adbyby\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_accesscontrol
+		tristate "Enable feed accesscontrol"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"accesscontrol\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+
+	config FEED_ddns
+		tristate "Enable feed ddns"
+		depends on PER_FEED_REPO
+		default y
+		help
+		 Enable the \"ddns\" feed in opkg distfeeds.conf and apk repositories.
+		 Say M to add the feed commented out.
+

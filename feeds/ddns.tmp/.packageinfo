@@ -1,0 +1,66 @@
+Source-Makefile: feeds/ddns/ddns-go/Makefile
+Build-Depends: golang/host
+
+Package: ddns-go
+Submenu: Web Servers/Proxies
+Version: 6.7.6-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A Linux web GUI client of ddns-go
+Maintainer: herboy2008 <herboy2008@gmail.com>
+Require-User: ddns-go:ddns-go
+Source: ddns-go-6.7.6.tar.gz
+License: AGPL-3.0-only
+LicenseFiles: LICENSE
+URL: https://github.com/jeessy2/ddns-go
+Type: ipkg
+Description:   ddns-go is a automatically obtain your public IPv4 or IPv6 address and resolve it to the corresponding domain name service,
+  support Alidns Dnspod Cloudflare Hicloud Callback Baiducloud porkbun GoDaddy Google Domains.
+@@
+
+
+Source-Makefile: feeds/ddns/luci-app-ddns-go/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-ddns-go
+Submenu: 3. Applications
+Version: 1.4.5-r20240409
+Depends: +libc +ddns-go +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI Support for Dynamic ddns-go Client
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description: LuCI Support for Dynamic ddns-go Client
+@@
+
+Package: luci-i18n-ddns-go-zh-cn
+Default: LUCI_LANG_zh_Hans||(ALL&&m)
+Version: x
+Depends: +libc luci-app-ddns-go
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-ddns-go - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-ddns-go - 简体中文 (Chinese Simplified)
+@@
+
+

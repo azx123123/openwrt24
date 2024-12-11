@@ -1,0 +1,24 @@
+Build-Depends: golang/host
+
+Package: xray-core
+Version: 24.11.30-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A platform for building proxies to bypass network restrictions
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: xray-core-24.11.30.tar.gz
+License: MPL-2.0
+LicenseFiles: LICENSE
+URL: https://xtls.github.io
+Type: ipkg
+Description:   Xray, Penetrates Everything. It helps you to build your own computer network.
+  It secures your network connections and thus protects your privacy.
+@@
+
+Makefile:29: /root/route/openwrt24/feeds/packages/lang/golang/golang-package.mk: No such file or directory
+gmake[1]: *** No rule to make target '/root/route/openwrt24/feeds/packages/lang/golang/golang-package.mk'.  Stop.

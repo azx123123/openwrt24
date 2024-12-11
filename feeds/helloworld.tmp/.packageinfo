@@ -1,0 +1,1042 @@
+Source-Makefile: feeds/helloworld/chinadns-ng/Makefile
+
+Package: chinadns-ng
+Submenu: IP Addresses and Names
+Version: 2024.11.17-r1
+Depends: +libc @(aarch64||arm||i386||mips||mipsel||mips64||mips64el||x86_64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: ChinaDNS next generation, refactoring with epoll and ipset.
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: chinadns-ng-2024.11.17-
+License: AGPL-3.0-only
+LicenseFiles: LICENSE
+URL: https://github.com/zfl9/chinadns-ng
+Type: ipkg
+Description: ChinaDNS next generation, refactoring with epoll and ipset.
+@@
+
+
+Source-Makefile: feeds/helloworld/dns2socks/Makefile
+
+Package: dns2socks
+Submenu: IP Addresses and Names
+Version: 2.1-r2
+Depends: +libc +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DNS to SOCKS or HTTP proxy
+Maintainer: ghostmaker
+Source: SourceCode.zip
+License: BSD-3-Clause
+URL: http://dns2socks.sourceforge.net/
+Type: ipkg
+Description:   This is a command line utility to resolve DNS requests via
+  a SOCKS tunnel like Tor or a HTTP proxy.
+@@
+
+
+Source-Makefile: feeds/helloworld/dns2tcp/Makefile
+
+Package: dns2tcp
+Submenu: IP Addresses and Names
+Version: 1.1.2-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: utility to convert dns query from udp to tcp
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: dns2tcp-1.1.2.tar.gz
+License: AGPL-3.0-only
+LicenseFiles: LICENSE
+URL: https://github.com/zfl9/dns2tcp
+Type: ipkg
+Description: utility to convert dns query from udp to tcp
+@@
+
+
+Source-Makefile: feeds/helloworld/gn/Makefile
+Build-Types: host
+
+Package: gn
+Version: 2024.11.19~24e92acb847233a9c0753c12cb82c98fc084e3db-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: devel
+Category: Development
+Repository: base
+Title: A meta-build system that generates build files for Ninja
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: gn-2024.11.19~24e92acb847233a9c0753c12cb82c98fc084e3db.tar.zst
+License: BSD 3-Clause
+LicenseFiles: LICENSE
+URL: https://gn.googlesource.com/gn/
+Type: ipkg
+Build-Only: 1
+Description:   GN can generate Ninja build files for C, C++, Rust, Objective C,
+  and Swift source on most popular platforms.
+@@
+
+
+Source-Makefile: feeds/helloworld/hysteria/Makefile
+Build-Depends: golang/host
+
+Package: hysteria
+Version: 2.6.0-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A feature-packed network utility optimized for networks of poor quality
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: hysteria-2.6.0.tar.gz
+License: MIT
+URL: https://github.com/apernet/hysteria
+Type: ipkg
+Description:   Hysteria is a feature-packed network utility optimized for networks
+  of poor quality (e.g. satellite connections, congested public Wi-Fi,
+  connecting from China to servers abroad) powered by a custom version
+  of QUIC protocol.
+@@
+
+
+Source-Makefile: feeds/helloworld/ipt2socks/Makefile
+
+Package: ipt2socks
+Version: 1.1.3-r3
+Depends: +libc +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Convert iptables to socks5
+Maintainer: 
+Source: ipt2socks-1.1.3.tar.gz
+License: AGPL-3.0
+URL: https://github.com/zfl9/ipt2socks
+Type: ipkg
+Description:   Utility for converting iptables (redirect/tproxy) to socks5.
+@@
+
+
+Source-Makefile: feeds/helloworld/lua-neturl/Makefile
+
+Package: lua-neturl
+Submenu: Lua
+Version: 1.1.1-r4
+Depends: +libc +lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: URL and Query string parser, builder, normalizer for Lua
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: neturl-1.1-1.tar.gz
+License: MIT
+URL: https://github.com/golgote/neturl
+Type: ipkg
+Description:   This small Lua library provides a few functions to parse URL with
+  querystring and build new URL easily.
+@@
+
+
+Source-Makefile: feeds/helloworld/luci-app-ssr-plus/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-ssr-plus
+Submenu: 3. Applications
+Version: 189-r3
+Depends: +libc +coreutils +coreutils-base64 +dns2socks +dns2tcp +dnsmasq-full +@PACKAGE_dnsmasq_full_ipset +ipset +kmod-ipt-nat +ip-full +iptables +iptables-mod-tproxy +lua +lua-neturl +libuci-lua +microsocks +tcping +resolveip +shadowsocksr-libev-ssr-check +uclient-fetch +PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-mbedtls:libustream-mbedtls +PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-openssl:libustream-openssl +PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-wolfssl:libustream-wolfssl +PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray:curl +PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray:v2ray-core +PACKAGE_luci-app-ssr-plus_INCLUDE_Xray:curl +PACKAGE_luci-app-ssr-plus_INCLUDE_Xray:xray-core +PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG:chinadns-ng +PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS:mosdns +PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria:hysteria +PACKAGE_luci-app-ssr-plus_INCLUDE_Tuic_Client:tuic-client +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadow_TLS:shadow-tls +PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks:ipt2socks +PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun:kcptun-client +PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy:naiveproxy +PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2:redsocks2 +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client:shadowsocks-libev-ss-local +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client:shadowsocks-libev-ss-redir +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server:shadowsocks-libev-ss-server +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client:shadowsocks-rust-sslocal +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server:shadowsocks-rust-ssserver +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs:simple-obfs +PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin:v2ray-plugin +PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client:shadowsocksr-libev-ssr-local +PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client:shadowsocksr-libev-ssr-redir +PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server:shadowsocksr-libev-ssr-server +PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan:trojan +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: SS/SSR/V2Ray/Trojan/NaiveProxy/Tuic/ShadowTLS/Hysteria/Socks5/Tun LuCI interface
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description: SS/SSR/V2Ray/Trojan/NaiveProxy/Tuic/ShadowTLS/Hysteria/Socks5/Tun LuCI interface
+@@
+Config:
+select PACKAGE_luci-lib-ipkg if PACKAGE_luci-app-ssr-plus
+
+choice
+	prompt "Uclient SSL Lib Selection"
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-openssl
+	
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-mbedtls
+	bool "libustream-mbedtls"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-openssl
+	bool "libustream-openssl"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_PACKAGE_libustream-wolfssl
+	bool "libustream-wolfssl"
+endchoice
+
+choice
+	prompt "Shadowsocks Client Selection"
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client if aarch64 || x86_64
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Client
+	bool "None"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client
+	bool "Shadowsocks-libev"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client
+	bool "Shadowsocks-rust"
+	depends on aarch64||arm||i386||mips||mipsel||x86_64
+	depends on !(TARGET_x86_geode||TARGET_x86_legacy)
+endchoice
+
+choice
+	prompt "Shadowsocks Server Selection"
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server if aarch64
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server if i386||x86_64||arm
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server
+	bool "None"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server
+	bool "Shadowsocks-libev"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server
+	bool "Shadowsocks-rust"
+	depends on aarch64||arm||i386||mips||mipsel||x86_64
+	depends on !(TARGET_x86_geode||TARGET_x86_legacy)
+endchoice
+
+choice
+	prompt "V2ray-core Selection"
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_Xray if aarch64||arm||i386||x86_64
+	default PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY
+	bool "None"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray
+	bool "V2ray-core"
+
+	config PACKAGE_luci-app-ssr-plus_INCLUDE_Xray
+	bool "Xray-core"
+endchoice
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG
+	bool "Include ChinaDNS-NG"
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS
+	bool "Include MosDNS"
+	default y if aarch64||arm||i386||x86_64
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria
+	bool "Include Hysteria"
+	select PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Tuic_Client
+	bool "Include Tuic-Client"
+	select PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG
+	select PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks
+	depends on aarch64||arm||i386||x86_64
+	depends on !(TARGET_x86_geode||TARGET_x86_legacy)
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadow_TLS
+	bool "Include Shadow-TLS"
+	select PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG
+	select PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client
+	depends on aarch64||arm||x86_64
+	depends on !(TARGET_x86_geode||TARGET_x86_legacy)
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks
+	bool "Include IPT2Socks"
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun
+	bool "Include Kcptun"
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy
+	bool "Include NaiveProxy"
+	depends on !(arc||armeb||mips||mips64||powerpc||TARGET_gemini)
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2
+	bool "Include Redsocks2"
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs
+	bool "Include Shadowsocks Simple Obfs Plugin"
+	default y
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin
+	bool "Include Shadowsocks V2ray Plugin"
+	default n
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client
+	bool "Include ShadowsocksR Libev Client"
+	default y
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server
+	bool "Include ShadowsocksR Libev Server"
+	default y if i386||x86_64||arm
+
+config PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan
+	bool "Include Trojan"
+	select PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks
+	default n
+
+@@
+
+Package: luci-i18n-ssr-plus-zh-cn
+Default: LUCI_LANG_zh_Hans||(ALL&&m)
+Version: x
+Depends: +libc luci-app-ssr-plus
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-ssr-plus - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-ssr-plus - 简体中文 (Chinese Simplified)
+@@
+
+
+Source-Makefile: feeds/helloworld/microsocks/Makefile
+
+Package: microsocks
+Submenu: Web Servers/Proxies
+Version: 1.0.4-r1
+Depends: +libc +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Tiny, portable SOCKS5 server
+Maintainer: lean
+Source: microsocks-1.0.4.tar.gz
+License: MIT
+LicenseFiles: COPYING
+URL: https://github.com/rofl0r/microsocks
+Type: ipkg
+Description:   A SOCKS5 service that you can run on your remote boxes to tunnel connections
+  through them, if for some reason SSH doesn't cut it for you.
+@@
+
+
+Source-Makefile: feeds/helloworld/mosdns/Makefile
+Build-Depends: golang/host
+
+Package: mosdns
+Submenu: IP Addresses and Names
+Version: 5.3.3-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A plug-in DNS forwarder/splitter
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: mosdns-5.3.3.tar.gz
+License: GPL-3.0
+URL: https://github.com/IrineSistiana/mosdns
+Type: ipkg
+Description: A plug-in DNS forwarder/splitter
+@@
+
+
+Source-Makefile: feeds/helloworld/naiveproxy/Makefile
+Build-Depends: gn/host
+
+Package: naiveproxy
+Submenu: Web Servers/Proxies
+Version: 129.0.6668.81-2-r1
+Depends: +libc @!(arc||armeb||mips||mips64||powerpc||TARGET_gemini) +libatomic
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Make a fortune quietly
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: naiveproxy-129.0.6668.81-2.tar.gz
+License: BSD 3-Clause
+LicenseFiles: LICENSE
+URL: https://github.com/klzgrad/naiveproxy
+Type: ipkg
+Description:   NaïveProxy uses Chrome's network stack to camouflage traffic with strong
+  censorship resistance and low detectability. Reusing Chrome's stack also
+  ensures best practices in performance and security.
+@@
+
+
+Source-Makefile: feeds/helloworld/redsocks2/Makefile
+
+Package: redsocks2
+Submenu: Web Servers/Proxies
+Version: 0.67-r4
+Depends: +libc +libevent2 +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Redirect any TCP connection to a SOCKS or HTTPS proxy server
+Maintainer: semigodking <semigodking@gmail.com>
+Source: redsocks2-0.67-d94c245ea47859cda5b4b7373308589206b97bdc.tar.gz
+URL: https://github.com/semigodking/redsocks
+Type: ipkg
+Description: This is a modified version of original redsocks. The name is changed to be REDSOCKS2 since this release to distinguish with original redsocks. This variant is useful for anti-GFW (Great Fire Wall).
+@@
+
+
+Source-Makefile: feeds/helloworld/shadow-tls/Makefile
+
+Package: shadow-tls
+Submenu: Web Servers/Proxies
+Version: 0.2.25-r1
+Depends: +libc @USE_MUSL @(aarch64||arm||x86_64) @!(TARGET_x86_geode||TARGET_x86_legacy)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A proxy to expose real tls handshake to the firewall.
+Maintainer: FluffyTigerFear
+Source: dummy
+LicenseFiles: LICENSE
+URL: https://github.com/ihciah/shadow-tls
+Type: ipkg
+Description: A proxy to expose real tls handshake to the firewall.
+@@
+
+
+Source-Makefile: feeds/helloworld/shadowsocks-libev/Makefile
+Build-Depends: c-ares pcre2
+
+Package: shadowsocks-libev-config
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev config scripts
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev config scripts
+@@
+
+Package: shadowsocks-libev-ss-rules
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +firewall4 +ip +resolveip +ucode +ucode-mod-fs +shadowsocks-libev-ss-redir +shadowsocks-libev-config +kmod-nft-tproxy
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-rules
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-rules
+@@
+
+Package: shadowsocks-libev-ss-local
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config +libpcre2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-local
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-local
+@@
+
+Package: shadowsocks-libev-ss-redir
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-redir
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-redir
+@@
+
+Package: shadowsocks-libev-ss-tunnel
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-tunnel
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-tunnel
+@@
+
+Package: shadowsocks-libev-ss-server
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config +libcares +libpcre2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-server
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-server
+@@
+
+
+Source-Makefile: feeds/helloworld/shadowsocks-rust/Makefile
+Build-Depends: rust/host
+
+Package: shadowsocks-rust-sslocal
+Submenu: Web Servers/Proxies
+Version: 1.21.2-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-rust sslocal
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: shadowsocks-rust-1.21.2.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/shadowsocks-rust
+Type: ipkg
+Description: shadowsocks-rust sslocal
+@@
+
+Package: shadowsocks-rust-ssmanager
+Submenu: Web Servers/Proxies
+Version: 1.21.2-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-rust ssmanager
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: shadowsocks-rust-1.21.2.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/shadowsocks-rust
+Type: ipkg
+Description: shadowsocks-rust ssmanager
+@@
+
+Package: shadowsocks-rust-ssserver
+Submenu: Web Servers/Proxies
+Version: 1.21.2-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-rust ssserver
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: shadowsocks-rust-1.21.2.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/shadowsocks-rust
+Type: ipkg
+Description: shadowsocks-rust ssserver
+@@
+
+Package: shadowsocks-rust-ssurl
+Submenu: Web Servers/Proxies
+Version: 1.21.2-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-rust ssurl
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: shadowsocks-rust-1.21.2.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/shadowsocks-rust
+Type: ipkg
+Description: shadowsocks-rust ssurl
+@@
+
+Package: shadowsocks-rust-ssservice
+Submenu: Web Servers/Proxies
+Version: 1.21.2-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-rust ssservice
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: shadowsocks-rust-1.21.2.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/shadowsocks-rust
+Type: ipkg
+Description: shadowsocks-rust ssservice
+@@
+
+
+Source-Makefile: feeds/helloworld/shadowsocksr-libev/Makefile
+
+Package: shadowsocksr-libev-ssr-check
+Submenu: Web Servers/Proxies
+Version: 2.5.6-r11
+Depends: +libc +libev +libsodium +libopenssl +libpthread +libpcre2 +libudns +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocksr-libev ssr-check
+Maintainer: 
+Source: shadowsocksr-libev-2.5.6.tar.zst
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocksrr/shadowsocksr-libev
+Type: ipkg
+Description: shadowsocksr-libev ssr-check
+@@
+
+Package: shadowsocksr-libev-ssr-local
+Submenu: Web Servers/Proxies
+Version: 2.5.6-r11
+Depends: +libc +libev +libsodium +libopenssl +libpthread +libpcre2 +libudns +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocksr-libev ssr-local
+Maintainer: 
+Source: shadowsocksr-libev-2.5.6.tar.zst
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocksrr/shadowsocksr-libev
+Type: ipkg
+Description: shadowsocksr-libev ssr-local
+@@
+
+Package: shadowsocksr-libev-ssr-nat
+Submenu: Web Servers/Proxies
+Version: 2.5.6-r11
+Depends: +libc +libev +libsodium +libopenssl +libpthread +libpcre2 +libudns +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocksr-libev ssr-nat
+Maintainer: 
+Source: shadowsocksr-libev-2.5.6.tar.zst
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocksrr/shadowsocksr-libev
+Type: ipkg
+Description: shadowsocksr-libev ssr-nat
+@@
+
+Package: shadowsocksr-libev-ssr-redir
+Submenu: Web Servers/Proxies
+Version: 2.5.6-r11
+Depends: +libc +libev +libsodium +libopenssl +libpthread +libpcre2 +libudns +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocksr-libev ssr-redir
+Maintainer: 
+Source: shadowsocksr-libev-2.5.6.tar.zst
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocksrr/shadowsocksr-libev
+Type: ipkg
+Description: shadowsocksr-libev ssr-redir
+@@
+
+Package: shadowsocksr-libev-ssr-server
+Submenu: Web Servers/Proxies
+Version: 2.5.6-r11
+Depends: +libc +libev +libsodium +libopenssl +libpthread +libpcre2 +libudns +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocksr-libev ssr-server
+Maintainer: 
+Source: shadowsocksr-libev-2.5.6.tar.zst
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocksrr/shadowsocksr-libev
+Type: ipkg
+Description: shadowsocksr-libev ssr-server
+@@
+
+
+Source-Makefile: feeds/helloworld/simple-obfs/Makefile
+Build-Depends: libev
+
+Package: simple-obfs-client
+Version: 0.0.5-r1
+Depends: +libc +libpthread +libev
+Conflicts: 
+Menu-Depends: 
+Provides: simple-obfs
+Section: net
+Category: Network
+Repository: base
+Title: A simple obfuscating tool (client)
+Maintainer: Jian Chang <aa65535@live.com>
+Source: simple-obfs-0.0.5.tar.zst
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/simple-obfs
+Type: ipkg
+Description:   Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+@@
+
+Package: simple-obfs-server
+Version: 0.0.5-r1
+Depends: +libc +libpthread +libev
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A simple obfuscating tool (server)
+Maintainer: Jian Chang <aa65535@live.com>
+Source: simple-obfs-0.0.5.tar.zst
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+URL: https://github.com/shadowsocks/simple-obfs
+Type: ipkg
+Description:   Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+@@
+
+
+Source-Makefile: feeds/helloworld/tcping/Makefile
+
+Package: tcping
+Version: 0.3-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: tcping measures the latency of a tcp-connection
+Maintainer: 
+Source: tcping-0.3.tar.gz
+License: GPL-2.0-only
+URL: https://github.com/jlyo/tcping
+Type: ipkg
+Description: tcping measures the latency of a tcp-connection
+@@
+
+
+Source-Makefile: feeds/helloworld/trojan/Makefile
+Build-Depends: openssl
+
+Package: trojan
+Submenu: Web Servers/Proxies
+Version: 1.16.0-r2
+Depends: +libc +libpthread +libstdcpp +libopenssl +boost +boost-system +boost-program_options +boost-date_time
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: An unidentifiable mechanism that helps you bypass GFW
+Maintainer: GreaterFire
+Source: trojan-1.16.0.tar.gz
+License: GPL-3.0
+URL: https://github.com/trojan-gfw/trojan
+Type: ipkg
+Description: An unidentifiable mechanism that helps you bypass GFW
+@@
+
+
+Source-Makefile: feeds/helloworld/tuic-client/Makefile
+
+Package: tuic-client
+Submenu: Web Servers/Proxies
+Version: 1.0.0-r1
+Depends: +libc @USE_MUSL @(aarch64||arm||i386||x86_64) @!(TARGET_x86_geode||TARGET_x86_legacy)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Delicately-TUICed 0-RTT proxy protocol
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: dummy
+LicenseFiles: LICENSE
+URL: https://github.com/EAimTY/tuic/
+Type: ipkg
+Description: Delicately-TUICed 0-RTT proxy protocol
+@@
+
+
+Source-Makefile: feeds/helloworld/v2ray-core/Makefile
+Build-Depends: golang/host
+
+Package: v2ray-core
+Version: 5.22.0-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A proxy platform to bypass network restrictions
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: v2ray-core-5.22.0.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://www.v2fly.org
+Type: ipkg
+Description:     Project V is a set of network tools that help you to build your own computer network.
+  It secures your network connections and thus protects your privacy.
+@@
+
+Package: v2ray-extra
+Version: 5.22.0-r1
+Depends: +libc v2ray-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A proxy platform to bypass network restrictions (extra resources)
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: v2ray-core-5.22.0.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://www.v2fly.org
+Type: ipkg
+Description:     Project V is a set of network tools that help you to build your own computer network.
+  It secures your network connections and thus protects your privacy.
+
+  This includes extra resources for v2ray-core.
+@@
+
+
+Source-Makefile: feeds/helloworld/v2ray-plugin/Makefile
+Build-Depends: golang/host
+
+Package: v2ray-plugin
+Submenu: Web Servers/Proxies
+Version: 5.17.0-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: SIP003 plugin for shadowsocks, based on v2ray
+Maintainer: madeye <max.c.lv@gmail.com>
+Source: v2ray-plugin-5.17.0.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/teddysun/v2ray-plugin
+Type: ipkg
+Description: SIP003 plugin for shadowsocks, based on v2ray
+@@
+
+
+Source-Makefile: feeds/helloworld/v2raya/Makefile
+Build-Depends: golang/host
+
+Package: v2raya
+Submenu: Web Servers/Proxies
+Version: 2.2.6-r1
+Depends: +libc +ca-bundle +kmod-nft-tproxy +xray-core
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A Linux web GUI client of Project V
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: v2rayA-2.2.6.tar.gz
+License: AGPL-3.0-only
+LicenseFiles: LICENSE
+URL: https://v2raya.org
+Type: ipkg
+Description:   v2rayA is a V2Ray Linux client supporting global transparent proxy,
+  compatible with SS, SSR, Trojan(trojan-go), PingTunnel protocols.
+@@
+
+
+Source-Makefile: feeds/helloworld/xray-core/Makefile
+Build-Depends: golang/host
+
+Package: xray-core
+Version: 24.11.30-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A platform for building proxies to bypass network restrictions
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: xray-core-24.11.30.tar.gz
+License: MPL-2.0
+LicenseFiles: LICENSE
+URL: https://xtls.github.io
+Type: ipkg
+Description:   Xray, Penetrates Everything. It helps you to build your own computer network.
+  It secures your network connections and thus protects your privacy.
+@@
+
+
+Source-Makefile: feeds/helloworld/xray-plugin/Makefile
+Build-Depends: golang/host
+
+Package: xray-plugin
+Submenu: Web Servers/Proxies
+Version: 1.8.24-r1
+Depends: +libc +ca-bundle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: SIP003 plugin for Shadowsocks, based on Xray
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: xray-plugin-1.8.24.tar.gz
+License: MIT
+LicenseFiles: LICENSE
+URL: https://github.com/teddysun/xray-plugin
+Type: ipkg
+Description: SIP003 plugin for Shadowsocks, based on Xray
+@@
+
+

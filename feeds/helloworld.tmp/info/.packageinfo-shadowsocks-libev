@@ -1,0 +1,130 @@
+Source-Makefile: feeds/helloworld/shadowsocks-libev/Makefile
+Build-Depends: c-ares pcre2
+
+Package: shadowsocks-libev-config
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev config scripts
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev config scripts
+@@
+
+Package: shadowsocks-libev-ss-rules
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +firewall4 +ip +resolveip +ucode +ucode-mod-fs +shadowsocks-libev-ss-redir +shadowsocks-libev-config +kmod-nft-tproxy
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-rules
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-rules
+@@
+
+Package: shadowsocks-libev-ss-local
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config +libpcre2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-local
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-local
+@@
+
+Package: shadowsocks-libev-ss-redir
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-redir
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-redir
+@@
+
+Package: shadowsocks-libev-ss-tunnel
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-tunnel
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-tunnel
+@@
+
+Package: shadowsocks-libev-ss-server
+Submenu: Web Servers/Proxies
+Version: 3.3.5-r12
+Depends: +libc +libev +libmbedtls +libpthread +libsodium +shadowsocks-libev-config +libcares +libpcre2
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: shadowsocks-libev ss-server
+Maintainer: Yousong Zhou <yszhou4tech@gmail.com>
+Source: shadowsocks-libev-3.3.5.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+CPE-ID: cpe:/a:shadowsocks:shadowsocks-libev
+URL: https://github.com/shadowsocks/shadowsocks-libev
+Type: ipkg
+Description: shadowsocks-libev ss-server
+@@
+
+

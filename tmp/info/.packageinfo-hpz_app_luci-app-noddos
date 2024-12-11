@@ -1,0 +1,61 @@
+Source-Makefile: package/hpz/app/luci-app-noddos/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-noddos
+Submenu: 3. Applications
+Version: x
+Depends: +libc +luci-nginx +noddos +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Noddos Service Web UI
+Maintainer: OpenWrt LuCI community
+Source: 
+License: GPLv3
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    Provides Web UI for Noddos service.
+@@
+
+Package: luci-i18n-noddos-ja
+Default: LUCI_LANG_ja||(ALL&&m)
+Version: x
+Depends: +libc luci-app-noddos
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-noddos - ja translation
+Maintainer: Steven Hessing <steven.hessing@gmail.com>
+Source: 
+License: GPLv3
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-noddos - 日本語 (Japanese)
+@@
+
+Package: luci-i18n-noddos-ru
+Default: LUCI_LANG_ru||(ALL&&m)
+Version: x
+Depends: +libc luci-app-noddos
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-noddos - ru translation
+Maintainer: Steven Hessing <steven.hessing@gmail.com>
+Source: 
+License: GPLv3
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-noddos - Русский (Russian)
+@@
+
+
